@@ -62,6 +62,11 @@
             L.tileLayer(mapboxTileUrl, {
                 attribution: 'Background map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
             }).addTo(map);
+
+            var div = L.DomUtil.create('div', 'info legend');
+              div.innerHTML = '<select><option>Age Estimation</option><option>Population Affinity Estimation</option><option>Sex Estimation</option><option>Stature Estimation</option></select>';
+              div.firstChild.onmousedown = div.firstChild.ondblclick = L.DomEvent.stopPropagation;
+            return div;
           }
 
           var dataset1 = [

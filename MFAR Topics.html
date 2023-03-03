@@ -25,6 +25,8 @@
         </div>
     </nav>
 
+
+
     <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <title>Leaflet + Mapbox test</title>
@@ -40,6 +42,13 @@
         .leaflet-container {
             background: #fff;
         }
+
+        .mapboxgl-popup-content {
+        text-align: left;
+        font-family: 'Open Sans', sans-serif;
+            max-width: 300%;
+        }
+
       </style>
 
         <script type="text/javascript">
@@ -54,12 +63,35 @@
                 attribution: 'Background map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
             }).addTo(map);
           }
+
+          var dataset1 = [
+            {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [-83.9403610730284, 35.9415282776475]
+                },
+                properties: {
+                    title: 'Bass Collection',
+                    image: 'MFAR_Draft2.png',
+                  icon: {
+                        iconUrl: 'MFAR_Draft2.png',
+                        iconSize: [30, 30],
+                        iconAnchor: [3, 35],
+                        popupAnchor: [0, -41],
+                        className: 'dot',
+                                }
+                }
+            }
+
         </script>
       </head>
       <body onload="init()">
         <h1 id="title">Forensic Anthropology Research Topics</h1>
         <div id="mapid"></div>
       </body>
+
+
 
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>

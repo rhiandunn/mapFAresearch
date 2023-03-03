@@ -23,13 +23,44 @@
                 </ul>
             </div>
         </div>
-    </nav><iframe allowfullscreen="" frameborder="0" src="https://cdn.bootstrapstudio.io/placeholders/map.html" width="100%" height="400"></iframe>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6"><img></div>
-            <div class="col-md-6"><img></div>
-        </div>
-    </div>
+    </nav>
+
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <title>Leaflet + Mapbox test</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css" type="text/css" crossorigin="">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js" crossorigin=""></script>
+      <style>
+        #mapid {
+            width: 100%;
+            height: 500px;
+            border: 1px solid #ccc;
+        }
+
+        .leaflet-container {
+            background: #fff;
+        }
+      </style>
+
+        <script type="text/javascript">
+          function init() {
+            // create map and set center and zoom level
+            var map = new L.map('mapid');
+            map.setView([-97.116138, 39.239062],13);
+
+            var mapboxTileUrl = 'https://api.mapbox.com/styles/v1/rhiandunn/clesrc1ad004f01n0z7yheigt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicmhpYW5kdW5uIiwiYSI6ImNrYXI2MXJkazBnZjAydG5yM2JieXZpcXYifQ.4r72t5730sfhxBOWS1ytsA';
+
+            L.tileLayer(mapboxTileUrl, {
+                attribution: 'Background map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+            }).addTo(map);
+          }
+        </script>
+      </head>
+      <body onload="init()">
+        <h1 id="title">Forensic Anthropology Research Topics</h1>
+        <div id="mapid"></div>
+      </body>
+      
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 

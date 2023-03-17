@@ -44,13 +44,6 @@
         .leaflet-container {
             background: #fff;
         }
-
-        .mapboxgl-popup-content {
-        text-align: left;
-        font-family: 'Open Sans', sans-serif;
-            max-width: 300%;
-        }
-
       </style>
 
         <script type="text/javascript">
@@ -64,33 +57,7 @@
             L.tileLayer(mapboxTileUrl, {
                 attribution: 'Background map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
             }).addTo(map);
-
-            var div = L.DomUtil.create('div', 'info legend');
-              div.innerHTML = '<select><option>Age Estimation</option><option>Population Affinity Estimation</option><option>Sex Estimation</option><option>Stature Estimation</option></select>';
-              div.firstChild.onmousedown = div.firstChild.ondblclick = L.DomEvent.stopPropagation;
-            return div;
           }
-
-          var dataset1 = [
-            {
-                type: 'Feature',
-                geometry: {
-                    type: 'Point',
-                    coordinates: [-83.9403610730284, 35.9415282776475]
-                },
-                properties: {
-                    title: 'Bass Collection',
-                    image: 'MFAR_Draft2.png',
-                  icon: {
-                        iconUrl: 'MFAR_Draft2.png',
-                        iconSize: [30, 30],
-                        iconAnchor: [3, 35],
-                        popupAnchor: [0, -41],
-                        className: 'dot',
-                                }
-                }
-            }
-
         </script>
       </head>
       <body onload="init()">

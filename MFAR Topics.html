@@ -33,7 +33,7 @@
 
 <!--Accordion Item: might be able to fix collapse here: https://getbootstrap.com/docs/5.0/components/accordion/-->
 
-
+<!--
     <div class="container">
         <div class="row">
             <div class="col-md-5">
@@ -108,6 +108,144 @@
             </div>
 
             <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+          -->
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-5">
+
+          <style>
+          .filterDiv {
+            float: left;
+            background-color: #ffffff;
+            color: #000000;
+            border: none;
+            width: 400px;
+            line-height: 25px;
+            text-align: left;
+            margin: 5px;
+            display: none;
+          }
+
+          .show {
+            display: block;
+          }
+
+          .container {
+            margin-top: 20px;
+            overflow: hidden;
+          }
+
+          /* Style the buttons */
+          .btn {
+            border: none;
+            outline: none;
+            padding: 12px 16px;
+            background-color: #f1f1f1;
+          }
+
+          .btn:hover {
+            background-color: #ddd;
+          }
+
+          .btn.active {
+            background-color: #666;
+            color: white;
+          }
+
+          .col-md-5 {
+              height: 500px;
+              overflow-y: scroll;
+            }
+
+          </style>
+          <body>
+
+      <!--    <h3>Filter By Article Topic</h3> -->
+
+          <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')">Show all</button>
+            <button class="btn" onclick="filterSelection('Age')"> Age</button>
+            <button class="btn" onclick="filterSelection('Population Affinity')"> Population Affinity</button>
+            <button class="btn" onclick="filterSelection('Sex')"> Sex</button>
+            <button class="btn" onclick="filterSelection('Stature')"> Stature</button>
+          </div>
+
+          <div class="container">
+            <div class="filterDiv Age">Berg GE (2008). Pubic Bone Age Estimation in Adult Women. <i>Journal of Forensic Sciences</i>, 53(3):569-577.</div>
+            <div class="filterDiv Age">Brooks S, Suchey JM (1990). Skeletal Age Determination Based on the Os Pubis: A Comparison of the Acsadi-Nemeskeri and Suchey-Brooks Methods. <i>Human Evolution</i>, 5:227-238.</div>
+            <div class="filterDiv Age">Buckberry JL, Chamberlain AT (2002). Age Estimation From the Auricular Surface of the Ilium: A Revised Method. <i>American Journal of Biological Anthropology</i>, 119(3):231-239.</div>
+            <div class="filterDiv Age">Calce SE (2012). A New Method to Estimate Adult Age-at-Death Using the Acetabulum. <i>American Journal of Biological Anthropology</i>, 148(1):11-23.</div>
+            <div class="filterDiv Population Affinity">Duray SM, Morter HB, Smith FJ (1999). Morphological Variation in Cervical Spinous Processes: Potential Applications in the Forensic Identification of Race from the Skeleton. <i>Journal of Forensic Sciences</i>, 44(5):937-44.</div>
+            <div class="filterDiv Age">Hartnett KM (2010). Analysis of Age-at-Death Estimation Using Data from a New, Modern Autopsy Sample—Part I: Pubic Bone. <i>Journal of Forensic Sciences</i>, 55(5):1145-1151.</div>
+            <div class="filterDiv Age">Hartnett KM (2010). Analysis of Age-at-Death Estimation Using Data from a New, Modern Autopsy Sample—Part II: Sternal End of the Fourth Rib. <i>Journal of Forensic Sciences</i>, 55(5):1152-1156.</div>
+            <div class="filterDiv Population Affinity">Hefner JT (2009). Cranial Nonmetric Variation and Estimating Ancestry. <i>Journal of Forensic Sciences</i>, 54(5):985-995.</div>
+            <div class="filterDiv Age">İşcan MY, Loth SR, Wright RK (1984). Age Estimation from the Rib by Phase Analysis: White Males. <i>Journal of Forensic Sciences</i>, 29(4):1094-1104.</div>
+            <div class="filterDiv Age">İşcan MY, Loth SR, Wright RK (1985). Age Estimation from the Rib by Phase Analysis: White Females. <i>Journal of Forensic Sciences</i>, 3(3):285-334.</div>
+            <div class="filterDiv Age">İşcan MY, Loth SR, Wright RK (1987). Racial Variation in the Sternal Extremity of the Rib and its Effect on Age Determination. <i>Journal of Forensic Sciences</i>, 32(2):452-466.</div>
+            <div class="filterDiv Age">Katz D, Suchey JM (1986). Age Determination of the Male 0s Pubis. <i>American Journal of Biological Anthropology</i>, 69(4):427-435.</div>
+            <div class="filterDiv Sex">Kimmerle EH, Ross A, Slice D (2008). Sexual Dimorphism in America: Geometric Morphometric Analysis of the Craniofacial Region. <i>Journal of Forensic Sciences</i>, 52(1):54-57.</div>
+            <div class="filterDiv Age">Konigsberg LW, Herrmann NP, Wescott DJ, Kimmerle EH (2008). Estimation and Evidence in Forensic Anthropology: Age-at-Death. <i>Journal of Forensic Sciences</i>, 53(3):541-557.</div>
+            <div class="filterDiv Age">Langley-Shirley N, Jantz RL (2010). A Bayesian Approach to Age Estimation in Modern Americans from the Clavicle. <i>Journal of Forensic Sciences</i>, 55(3):571-583.</div>
+            <div class="filterDiv Age">Lovejoy CO, Meindl RS, Pryzbeck TR, Mensforth RP (1985). Chronological Metamorphosis of the Auricular Surface of the Ilium: A New Method for the Determination of Adult Skeletal Age at Death. <i>American Journal of Biological Anthropology</i>, 68(1):15-28.</div>
+            <div class="filterDiv Stature">Maijanen H (2009). Testing Anatomical Methods for Stature Estimation on Individuals from the W. M. Bass Donated Skeletal Collection. <i>Journal of Forensic Sciences</i>, 54(4):746-752.</div>
+            <div class="filterDiv Age">Osborne DL, Simmons TL, Nawrocki SP (2004). Reconsidering the Auricular Surface as an Indicator of Age at Death. <i>Journal of Forensic Sciences</i>, 49(5):905-911.</div>
+            <div class="filterDiv Stature">Ousley S (1995). Should We Estimate Biological or Forensic Stature? <i>Journal of Forensic Sciences</i>, 40:768-773. </div>
+            <div class="filterDiv Age">Prince DA, Ubelaker DH (2002). Application of Lamendin’s Adult Dental Aging Technique to a Diverse Skeletal Sample. <i>Journal of Forensic Sciences</i>, 47(1):107-116.</div>
+            <div class="filterDiv Age">Todd TW (1920). Age Changes in the Pubic Bone. <i>American Journal of Biological Anthropology</i>, 3(3):285-334. </div>
+  <!--      <div class="filterDiv animals">Cow</div>
+            <div class="filterDiv animals">Cow</div>
+            <div class="filterDiv animals">Cow</div>
+            <div class="filterDiv animals">Cow</div>
+            <div class="filterDiv animals">Cow</div>  -->
+          </div>
+
+          <script>
+          filterSelection("all")
+          function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+              w3RemoveClass(x[i], "show");
+              if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+          }
+
+          function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+              if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+            }
+          }
+
+          function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+              while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);
+              }
+            }
+            element.className = arr1.join(" ");
+          }
+
+          // Add active class to the current button (highlight it)
+          var btnContainer = document.getElementById("myBtnContainer");
+          var btns = btnContainer.getElementsByClassName("btn");
+          for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function(){
+              var current = document.getElementsByClassName("active");
+              current[0].className = current[0].className.replace(" active", "");
+              this.className += " active";
+            });
+          }
+          </script>
+
+          </body>
+ </div>
 
             <div class="col-md-7">
 
@@ -133,7 +271,7 @@
         <script type="text/javascript">
           function init() {
             // create map and set center and zoom level
-            var map = new L.map('mapid', {
+            var map1 = new L.map('mapid', {
                 minZoom:4});
             map.setView([39.239062, -97.116138],4);
 
@@ -141,8 +279,308 @@
 
             L.tileLayer(mapboxTileUrl, {
                 attribution: 'Background map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-            }).addTo(map);
+            }).addTo(map1);
           }
+
+<!--Age-->
+          var dataset1 = [
+            {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [-83.94036107, 35.94152828]
+                },
+                properties: {
+                    title: 'Bass Collection',
+                  icon: {
+                        iconUrl: 'Age-9.png',
+                        iconSize: [30, 30],
+                        iconAnchor: [3, 35],
+                        popupAnchor: [0, -41],
+                        className: 'dot',
+                                }
+
+                }
+            },
+
+            {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [-77.02616196, 38.8915]
+                },
+                properties: {
+                    title: 'Terry Collection',
+                  icon: {
+                        iconUrl: 'Age-6.png',
+                        iconSize: [30, 30],
+                        iconAnchor: [3, 35],
+                        popupAnchor: [0, -41],
+                        className: 'dot',
+                                }
+
+                }
+            },
+
+            {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [-81.61287287, 41.51177303]
+                },
+                properties: {
+                    title: 'Hamann-Todd Collection',
+                  icon: {
+                        iconUrl: 'Age-3.png',
+                        iconSize: [30, 30],
+                        iconAnchor: [3, 35],
+                        popupAnchor: [0, -41],
+                        className: 'dot',
+                                }
+
+                }
+            },
+
+          ];
+
+<!--Sex-->
+          var dataset2 = [
+            {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [-106.6251185, 35.0852212]
+                },
+                properties: {
+                    title: 'Maxwell Collection',
+                  icon: {
+                        iconUrl: 'Sex-2.png',
+                        iconSize: [30, 30],
+                        iconAnchor: [3, 35],
+                        popupAnchor: [0, -41],
+                        className: 'dot',
+                                }
+
+                }
+            },
+
+            {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [-77.02616196, 38.8915]
+                },
+                properties: {
+                    title: 'Terry Collection',
+                  icon: {
+                        iconUrl: 'Sex-7.png',
+                        iconSize: [30, 30],
+                        iconAnchor: [3, 35],
+                        popupAnchor: [0, -41],
+                        className: 'dot',
+                                }
+
+                }
+            },
+
+            {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [-83.94036107, 35.94152828]
+                },
+                properties: {
+                    title: 'Bass Collection',
+                  icon: {
+                        iconUrl: 'Sex-8.png',
+                        iconSize: [30, 30],
+                        iconAnchor: [3, 35],
+                        popupAnchor: [0, -41],
+                        className: 'dot',
+                                }
+
+                }
+            },
+
+            {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [-81.61287287, 41.51177303]
+                },
+                properties: {
+                    title: 'Hamann-Todd Collection',
+                  icon: {
+                        iconUrl: 'Age-9.png',
+                        iconSize: [30, 30],
+                        iconAnchor: [3, 35],
+                        popupAnchor: [0, -41],
+                        className: 'dot',
+                                }
+
+                }
+            },
+
+          ];
+
+<!--Population Affinity-->
+          var dataset3 = [
+            {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [-81.61287287, 41.51177303]
+                },
+                properties: {
+                    title: 'Hamann-Todd Collection',
+                  icon: {
+                        iconUrl: 'Pop-3.png',
+                        iconSize: [30, 30],
+                        iconAnchor: [3, 35],
+                        popupAnchor: [0, -41],
+                        className: 'dot',
+                                }
+
+                }
+            },
+
+            {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [-83.94036107, 35.94152828]
+                },
+                properties: {
+                    title: 'Bass Collection',
+                  icon: {
+                        iconUrl: 'Pop-6.png',
+                        iconSize: [30, 30],
+                        iconAnchor: [3, 35],
+                        popupAnchor: [0, -41],
+                        className: 'dot',
+                                }
+
+                }
+            },
+
+            {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [-77.02616196, 38.8915]
+                },
+                properties: {
+                    title: 'Terry Collection',
+                  icon: {
+                        iconUrl: 'Pop-7.png',
+                        iconSize: [30, 30],
+                        iconAnchor: [3, 35],
+                        popupAnchor: [0, -41],
+                        className: 'dot',
+                                }
+
+                }
+            },
+
+          ];
+
+<!--Stature-->
+                    var dataset4 = [
+                      {
+                          type: 'Feature',
+                          geometry: {
+                              type: 'Point',
+                              coordinates: [-83.94036107, 35.94152828]
+                          },
+                          properties: {
+                              title: 'Bass Collection',
+                            icon: {
+                                  iconUrl: 'Stat-1.png',
+                                  iconSize: [30, 30],
+                                  iconAnchor: [3, 35],
+                                  popupAnchor: [0, -41],
+                                  className: 'dot',
+                                          }
+
+                          }
+                      },
+
+                      {
+                          type: 'Feature',
+                          geometry: {
+                              type: 'Point',
+                              coordinates: [-83.94036107, 35.94152828]
+                          },
+                          properties: {
+                              title: 'Bass Collection',
+                            icon: {
+                                  iconUrl: 'Pop-6.png',
+                                  iconSize: [30, 30],
+                                  iconAnchor: [3, 35],
+                                  popupAnchor: [0, -41],
+                                  className: 'dot',
+                                          }
+
+                          }
+                      },
+
+                      {
+                          type: 'Feature',
+                          geometry: {
+                              type: 'Point',
+                              coordinates: [-77.02616196, 38.8915]
+                          },
+                          properties: {
+                              title: 'Terry Collection',
+                            icon: {
+                                  iconUrl: 'Stat-3.png',
+                                  iconSize: [30, 30],
+                                  iconAnchor: [3, 35],
+                                  popupAnchor: [0, -41],
+                                  className: 'dot',
+                                          }
+
+                          }
+                      },
+
+                    ];
+
+
+          var optionsObject = {
+              onEachFeature: onEachFeature
+          };
+
+          function onEachFeature (feature, layer) {
+             var content = "<div style='clear: both'></div><div style='float: left; padding: 5px; margin-right: 10px'><img style='width: 200px;' src=" + feature.properties.image + " /></div><div><h4>" + feature.properties.title + "</h4><p>" + feature.properties.time + "</p><p>" + feature.properties.description + "</p></div>";
+             layer.setIcon(L.icon(feature.properties.icon));
+              layer.bindPopup(content, {closeButton: true});
+          };
+
+          // Create geoJSON layers
+             var Age = L.geoJSON(dataset1, optionsObject);
+             var Sex = L.geoJSON(dataset2, optionsObject);
+             var Population-Affinity = L.geoJSON(dataset3, optionsObject);
+             var Stature = L.geoJSON(dataset4, optionsObject);
+
+
+             // Create the layerGroup
+              var multiLayers = L.layerGroup([Age, Population-Affinity, Sex, Stature]);
+
+              // Create the layerGroup
+                          var multiLayers = L.layerGroup([Age, Population-Affinity, Sex, Stature]);
+
+
+            	var userid = 0
+                    function addUser() {
+                        sidebar.addPanel({
+                            id:   'user' + userid++,
+                            tab:  '<i class="fa fa-user"></i>',
+                            title: 'User Profile ' + userid,
+                            pane: '<p>user ipsum dolor sit amet</p>',
+                        });
+                    }
+
+
         </script>
       </head>
       <body onload="init()">

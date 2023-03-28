@@ -109,9 +109,10 @@
 
             <script src="assets/bootstrap/js/bootstrap.min.js"></script>
           -->
+
 <!--Filter Code-->
           <div class="container">
-              <div class="row">
+              <div class="row" style= "margin-bottom:40px;">
                   <div class="col-md-5">
 
           <style>
@@ -246,7 +247,8 @@
 
 <!--Map code-->
 <div class="col-md-7">
-
+<!--https://leafletjs.com/examples/layers-control/-->
+<!--https://leafletjs.com/reference.html#interactive-layer-->
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Leaflet + Mapbox test</title>
@@ -265,26 +267,89 @@
       }
     </style>
 
-      <script type="text/javascript">
-        function init() {
-          // create map and set center and zoom level
-          var map = new L.map('mapid', {
-              center: [39.239062, -97.116138]
-              minZoom:4,
-              layers [Age, Population Affinity, Sex, Stature]
-            });
+    <script type="text/javascript">
+      function init() {
+        // create map and set center and zoom level
+        var map = new L.map('mapid', {
+            minZoom:4});
+        map.setView([39.239062, -97.116138],4);
 
           var mapboxTileUrl = 'https://api.mapbox.com/styles/v1/rhiandunn/clesrc1ad004f01n0z7yheigt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicmhpYW5kdW5uIiwiYSI6ImNrYXI2MXJkazBnZjAydG5yM2JieXZpcXYifQ.4r72t5730sfhxBOWS1ytsA';
 
-          L.tileLayer(mapboxTileUrl, {
+          var osm = new L.tileLayer(mapboxTileUrl, {
               attribution: 'Background map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
           }).addTo(map);
+
+          // Creating markers
+          var Bass = L.Marker([35.94152828, -83.94036107]),
+              HamannTodd = L.Marker([41.51177303, -81.61287287]),
+              Terry = L.Marker([38.8915, -77.02616196]);
+
+          // Creating layer group
+          var layerGroup = L.layerGroup([Bass, HamannTodd, Terry]);
+
+          var baseMaps = {
+              "OpenStreetMap": osm,
+          };
+
+          var overlayMaps = {
+              "Collections": layerGroup
+          };
+
+          var layerControl = L.control.layers(baseMaps, layerGroup).addTo(map);
         }
+
       </script>
     </head>
     <body onload="init()">
       <div id="mapid"></div>
     </body>
 </body>
+</div>
+</div>
+</div>
+
+<!--
+<head>
+   <title>Leaflet Layer Group</title>
+   <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css"  type="text/css" crossorigin="">
+   <script src = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js" crossorigin=""></script>
+</head>
+
+<body>
+   <div id = "map" style = "width: 900px; height: 580px"></div>
+   <script>
+      // Creating map options
+      var mapOptions = {
+         center: [39.239062, -97.116138],
+         zoom: 4
+      }
+      var map = new L.map('map', mapOptions); // Creating a map object
+
+      // Creating a Layer object
+      var layer = new L.TileLayer('https://api.mapbox.com/styles/v1/rhiandunn/clesrc1ad004f01n0z7yheigt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicmhpYW5kdW5uIiwiYSI6ImNrYXI2MXJkazBnZjAydG5yM2JieXZpcXYifQ.4r72t5730sfhxBOWS1ytsA');
+      map.addLayer(layer);      // Adding layer to the map
+
+      // Creating markers
+      var hydMarker = new L.Marker([17.385044, 78.486671]);
+      var vskpMarker = new L.Marker([17.686816, 83.218482]);
+      var vjwdMarker = new L.Marker([16.506174, 80.648015]);
+
+      // Creating latlng object
+      var latlngs = [
+         [17.385044, 78.486671],
+         [16.506174, 80.648015],
+         [17.686816, 83.218482]
+      ];
+      // Creating a polygon
+      var polygon = L.polygon(latlngs, {color: 'red'});
+
+      // Creating layer group
+      var layerGroup = L.layerGroup([hydMarker, vskpMarker, vjwdMarker, polygon]);
+      layerGroup.addTo(map);    // Adding layer group to map
+   </script>
+</body>
+-->
+
 
 </html>

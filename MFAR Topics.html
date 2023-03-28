@@ -269,8 +269,10 @@
         function init() {
           // create map and set center and zoom level
           var map = new L.map('mapid', {
-              minZoom:4});
-          map.setView([39.239062, -97.116138],4);
+              center: [39.239062, -97.116138]
+              minZoom:4,
+              layers [Age, Population Affinity, Sex, Stature]
+            });
 
           var mapboxTileUrl = 'https://api.mapbox.com/styles/v1/rhiandunn/clesrc1ad004f01n0z7yheigt/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoicmhpYW5kdW5uIiwiYSI6ImNrYXI2MXJkazBnZjAydG5yM2JieXZpcXYifQ.4r72t5730sfhxBOWS1ytsA';
 

@@ -26,7 +26,7 @@
     </nav>
 
     <head>
-      <h1 style="margin-top: 24px;text-align: center;margin-bottom: 20px;">Unted States Based Skeletal Collections</h1>
+      <h1 style="margin-top: 24px;text-align: center;margin-bottom: 20px;">United States Based Skeletal Collections</h1>
     </head>
 
     <div class="container">
@@ -85,6 +85,12 @@
                 from {opacity: 0;}
                 to {opacity: 1;}
               }
+
+              .col-md-5 {
+                  height: 500px;
+                  overflow-y: scroll;
+                }
+
               </style>
               </head>
               <body>
@@ -101,21 +107,38 @@
               <div id="Terry" class="tabcontent">
                 <h3>Robert J. Terry Anatomical Collection</h3>
                 <p>London is the capital city of England.</p>
+                <br>
+                <br>
+                <p style="font-size:10px;">References</p>
+                <p style="font-size:10px;">Hunt DR, Albanese J (2005). History and demographic composition of the Robert J. Terry anatomical collection. <i>American Journal of Biological Anthropology</i>, 127(4):406-417.<a href="https://doi.org/10.1002/ajpa.20135" target="_blank">https://doi.org/10.1002/ajpa.20135</a></p>
+                <p style="font-size:10px;">Muller JL, Pearlstein KE, de la Cova C (2017). Dissection and documented skeletal collections: Embodiments of legalized inequality. In: K. C. Nystrom, ed. <i>The bioarchaeology of dissection and autopsy in the United States</i>. New Paltz, NY: Springer. pp. 185-201.<a href="https://doi.org/10.1007/978-3-319-26836-1_9" target="_blank">https://doi.org/10.1007/978-3-319-26836-1_9</a></p>
               </div>
 
               <div id="HamannTodd" class="tabcontent">
                 <h3>Hamann-Todd Osteological Collection</h3>
                 <p>Paris is the capital of France.</p>
+                <br>
+                <br>
+                <p style="font-size:10px;">References</p>
+                <p style="font-size:10px;">Muller JL, Pearlstein KE, de la Cova C (2017). Dissection and documented skeletal collections: Embodiments of legalized inequality. In: K. C. Nystrom, ed. <i>The bioarchaeology of dissection and autopsy in the United States</i>. New Paltz, NY: Springer. pp. 185-201.<a href="https://doi.org/10.1007/978-3-319-26836-1_9" target="_blank">https://doi.org/10.1007/978-3-319-26836-1_9</a></p>
               </div>
 
               <div id="UTK" class="tabcontent">
                 <h3>University of Tennessee, Knoxville, Donated Skeletal Collection</h3>
                 <p>Tokyo is the capital of Japan.</p>
+                <br>
+                <br>
+                <p style="font-size:10px;">References</p>
+                <p style="font-size:10px;">TBA</p>
               </div>
 
               <div id="Maxwell" class="tabcontent">
-                <h3>Maxwell Museum's Osteological Collection</h3>
+                <h3>Maxwell Museum's Documented Skeletal Collection</h3>
                 <p>Tokyo is the capital of Japan.</p>
+                <br>
+                <br>
+                <p style="font-size:10px;">References</p>
+                <p style="font-size:10px;">Komar DA, Grivas C (2008). Manufactured populations: what do contemporary reference skeletal collections represent? A comparative study using the Maxwell Museum documented collection. <i>American Journal of Biological Anthropology</i>, 137(2):224-233.<a href="https://doi.org/10.1002/ajpa.20858" target="_blank">https://doi.org/10.1002/ajpa.20858</a></p>
               </div>
 
               <script>
@@ -202,10 +225,10 @@
 
                       // Creating markers
                       // marker code: https://github.com/pointhi/leaflet-color-markers
-                      var Bass = new L.Marker([35.94152828, -83.94036107], {icon: greenIcon}) .bindPopup('University of Tennessee, Knoxville, Donated Skeletal Collection');
-                      var HamannTodd = new L.Marker([41.51177303, -81.61287287]) .bindPopup('Hamann-Todd Osteological Collection');
-                      var Terry = new L.Marker([38.8915, -77.02616196], {icon: redIcon}) .bindPopup('Robert J. Terry Anatomical Collection');
-                      var Maxwell = new L.Marker([35.0852212, -106.6251185], {icon: goldIcon}) .bindPopup('Maxwell Museum Osteological Collection');
+                      var Bass = new L.Marker([35.94152828, -83.94036107], {icon: greenIcon}) .bindPopup('<b>University of Tennessee, Knoxville, Donated Skeletal Collection</b> <br> Forensic Anthropology Center <br> University of Tennessee, Knoxville');
+                      var HamannTodd = new L.Marker([41.51177303, -81.61287287]) .bindPopup('<b>Hamann-Todd Osteological Collection</b> <br> Physical Anthropology Collection <br> Cleveland Museum of Natural History');
+                      var Terry = new L.Marker([38.8915, -77.02616196], {icon: redIcon}) .bindPopup('<b>Robert J. Terry Anatomical Collection</b> <br> Department of Anthropology <br> National Museum of Natural History <br> Smithsonian Institution');
+                      var Maxwell = new L.Marker([35.0852212, -106.6251185], {icon: goldIcon}) .bindPopup('<b>Maxwell Museum Documented Skeletal Collection</b> <br> Maxwell Museum of Anthropology <br> University of New Mexico');
 
                       var layerGroup = L.layerGroup([Bass, HamannTodd, Terry, Maxwell]);
 

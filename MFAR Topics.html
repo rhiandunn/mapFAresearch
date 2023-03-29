@@ -287,16 +287,18 @@
 
           // Creating layer group
           var layerGroup = L.layerGroup([Bass, HamannTodd, Terry]);
+          var layerGroup2 = L.layerGroup([Bass, Terry])
 
           var baseMaps = {
-              "OpenStreetMap": osm,
+              "OpenStreetMap": osm
           };
 
           var overlayMaps = {
-              "Collections": layerGroup
+              "Age": layerGroup,
+              "Sex": layerGroup2
           };
 
-          var layerControl = L.control.layers(baseMaps, layerGroup).addTo(map);
+          var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
         }
 
       </script>

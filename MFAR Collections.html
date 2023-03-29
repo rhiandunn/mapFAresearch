@@ -32,52 +32,113 @@
     <div class="container">
         <div class="row">
             <div class="col-md-5">
-                <div class="accordion" role="tablist" id="accordion-1">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-1" aria-expanded="true" aria-controls="accordion-1 .item-1">Hamann-Todd Osteological Collection, Cleveland, OH</button></h2>
-                        <div class="accordion-collapse collapse item-1" role="tabpanel" data-bs-parent="#accordion-1">
-                            <div class="accordion-body">
-                                <p class="mb-0">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-2" aria-expanded="false" aria-controls="accordion-1 .item-2">Robert J. Terry Anatomical Collection, Washinton DC</button></h2>
-                        <div class="accordion-collapse collapse item-2" role="tabpanel" data-bs-parent="#accordion-1">
-                            <div class="accordion-body">
-                                <p class="mb-0">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-3" aria-expanded="false" aria-controls="accordion-1 .item-3">Maxwell Museum's Osteological Collection in NM</button></h2>
-                        <div class="accordion-collapse collapse item-3" role="tabpanel" data-bs-parent="#accordion-1">
-                            <div class="accordion-body">
-                                <p class="mb-0">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-4" aria-expanded="false" aria-controls="accordion-1 .item-4">Bass Collection in TN</button></h2>
-                        <div class="accordion-collapse collapse item-4" role="tabpanel" data-bs-parent="#accordion-1">
-                            <div class="accordion-body">
-                                <p class="mb-0">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-1 .item-5" aria-expanded="false" aria-controls="accordion-1 .item-5">Other</button></h2>
-                        <div class="accordion-collapse collapse item-5" role="tabpanel" data-bs-parent="#accordion-1">
-                            <div class="accordion-body">
-                                <p class="mb-0">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+              <head>
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+              <style>
+              body {font-family: Arial;}
 
-            <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+              /* Style the tab */
+              .tab {
+                overflow: hidden;
+                border: 1px solid #ccc;
+                background-color: #f1f1f1;
+              }
 
+              /* Style the buttons inside the tab */
+              .tab button {
+                background-color: inherit;
+                float: left;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 14px 16px;
+                transition: 0.3s;
+                font-size: 17px;
+              }
+
+              /* Change background color of buttons on hover */
+              .tab button:hover {
+                background-color: #ddd;
+              }
+
+              /* Create an active/current tablink class */
+              .tab button.active {
+                background-color: #ccc;
+              }
+
+              /* Style the tab content */
+              .tabcontent {
+                display: none;
+                padding: 6px 12px;
+                -webkit-animation: fadeEffect 1s;
+                animation: fadeEffect 1s;
+              }
+
+              /* Fade in tabs */
+              @-webkit-keyframes fadeEffect {
+                from {opacity: 0;}
+                to {opacity: 1;}
+              }
+
+              @keyframes fadeEffect {
+                from {opacity: 0;}
+                to {opacity: 1;}
+              }
+              </style>
+              </head>
+              <body>
+
+              <p>Click to learn more about each United States-based Documented Skeletal Collection</p>
+
+              <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'Terry')">Terry</button>
+                <button class="tablinks" onclick="openCity(event, 'HamannTodd')">Hamann-Todd</button>
+                <button class="tablinks" onclick="openCity(event, 'UTK')">UT Knoxville</button>
+                <button class="tablinks" onclick="openCity(event, 'Maxwell')">Maxwell</button>
+              </div>
+
+              <div id="Terry" class="tabcontent">
+                <h3>Robert J. Terry Anatomical Collection</h3>
+                <p>London is the capital city of England.</p>
+              </div>
+
+              <div id="HamannTodd" class="tabcontent">
+                <h3>Hamann-Todd Osteological Collection</h3>
+                <p>Paris is the capital of France.</p>
+              </div>
+
+              <div id="UTK" class="tabcontent">
+                <h3>University of Tennessee, Knoxville, Donated Skeletal Collection</h3>
+                <p>Tokyo is the capital of Japan.</p>
+              </div>
+
+              <div id="Maxwell" class="tabcontent">
+                <h3>Maxwell Museum's Osteological Collection</h3>
+                <p>Tokyo is the capital of Japan.</p>
+              </div>
+
+              <script>
+              function openCity(evt, cityName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                  tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+              }
+              </script>
+
+              </body>
+          </div>
+
+          <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+<!--Map Code-->
             <div class="col-md-7">
 
               <head>
@@ -116,6 +177,5 @@
                 <body onload="init()">
                   <div id="mapid"></div>
                 </body>
-
 </body>
 </html>

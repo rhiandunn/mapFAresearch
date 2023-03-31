@@ -294,27 +294,56 @@
 
       // Creating custom markers
 
-      var age3Icon = L.icon({
-            iconUrl: 'assets/img/Age 3.png',
-            iconSize: [25, 25], // size of the icon
-            className: 'dot',
+      var topicsIcon = L.Icon.extend({
+            options: {
+              iconSize: [25, 25], // size of the icon
+              className: 'dot',
+            }
         });
 
+        var age3Icon = new topicsIcon({iconUrl: 'assets/img/age3.png'}),
+            age6Icon = new topicsIcon({iconUrl: 'assets/img/age6.png'}),
+            age9Icon = new topicsIcon({iconUrl: 'assets/img/age9.png'}),
+            pop3Icon = new topicsIcon({iconUrl: 'assets/img/pop3.png'}),
+            pop6Icon = new topicsIcon({iconUrl: 'assets/img/pop6.png'}),
+            pop7Icon = new topicsIcon({iconUrl: 'assets/img/pop7.png'}),
+            sex2Icon = new topicsIcon({iconUrl: 'assets/img/sex2.png'}),
+            sex7Icon = new topicsIcon({iconUrl: 'assets/img/sex7.png'}),
+            sex8Icon = new topicsIcon({iconUrl: 'assets/img/sex8.png'}),
+            sex9Icon = new topicsIcon({iconUrl: 'assets/img/sex9.png'}),
+            stat1Icon = new topicsIcon({iconUrl: 'assets/img/stat1.png'}),
+            stat3Icon = new topicsIcon({iconUrl: 'assets/img/stat3.png'});
+
+
           // Creating markers
-         var Bass = L.marker([35.94152828, -83.94036107], {icon: age3Icon}),
-              HamannTodd = L.marker([41.51177303, -81.61287287], {icon: age3Icon}),
-              Terry = L.marker([38.8915, -77.02616196], {icon: age3Icon}),
-              Maxwell = L.marker([35.0852212, -106.6251185], {icon: age3Icon});
+         var  ageHamannTodd = L.marker([41.51177303, -81.61287287], {icon: age3Icon}) .bindPopup("Hamann Todd Osteological Collection"),
+              ageTerry = L.marker([38.8915, -77.02616196], {icon: age6Icon}) .bindPopup("Robert J. Terry Anatomical Collection"),
+              ageBass = L.marker([35.94152828, -83.94036107], {icon: age9Icon}) .bindPopup("University of Tennessee, Knoxville, Donated Skeletal Collection"),
+              //pop
+              popHamannTodd = L.marker([41.51177303, -81.61287287], {icon: pop3Icon}) .bindPopup("Hamann Todd Osteological Collection"),
+              popBass = L.marker([35.94152828, -83.94036107], {icon: pop6Icon}) .bindPopup("University of Tennessee, Knoxville, Donated Skeletal Collection"),
+              popTerry = L.marker([38.8915, -77.02616196], {icon: pop7Icon}) .bindPopup("Robert J. Terry Anatomical Collection"),
+              //sex
+              sexMaxwell = L.marker([35.0852212, -106.6251185], {icon: sex2Icon}) .bindPopup("Maxwell Museum Documented Skeletal Collection"),
+              sexTerry = L.marker([38.8915, -77.02616196], {icon: sex7Icon}) .bindPopup("Robert J. Terry Anatomical Collection"),
+              sexBass = L.marker([35.94152828, -83.94036107], {icon: sex8Icon}) .bindPopup("University of Tennessee, Knoxville, Donated Skeletal Collection"),
+              sexHamannTodd = L.marker([41.51177303, -81.61287287], {icon: sex9Icon}) .bindPopup("Hamann Todd Osteological Collection"),
+              //stat
+              statBass = L.marker([35.94152828, -83.94036107], {icon: stat1Icon}) .bindPopup("University of Tennessee, Knoxville, Donated Skeletal Collection"),
+              statTerry = L.marker([38.8915, -77.02616196], {icon: stat3Icon}) .bindPopup("Robert J. Terry Anatomical Collection");
+
 
           // Creating layer group
-          var layerGroup = L.layerGroup([Bass, HamannTodd, Terry]);
-          var layerGroup2 = L.layerGroup([Bass, Terry]);
-          var layerGroup3 = L.layerGroup([Maxwell, Terry]);
+          var layerGroup = L.layerGroup([ageHamannTodd, ageTerry, ageBass]);
+          var layerGroup2 = L.layerGroup([popHamannTodd, popBass, popTerry]);
+          var layerGroup3 = L.layerGroup([sexMaxwell, sexTerry, sexBass, sexHamannTodd]);
+          var layerGroup4 = L.layerGroup([statBass, statTerry]);
 
           var overlayMaps = {
               "Age": layerGroup,
               "Population Affinity": layerGroup2,
-              "Sex": layerGroup3
+              "Sex": layerGroup3,
+              "Stature": layerGroup4
           };
 
           var layerControl = L.control.layers(overlayMaps).addTo(map);

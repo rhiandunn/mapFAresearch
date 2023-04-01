@@ -222,6 +222,12 @@
                   //  var  test = L.marker([41.51177303, -81.61287287], {icon: mfarIcon}) .bindPopup("test") .addTo(map);
 //The code I need for linking text to map http://www.java2s.com/example/javascript/leaflet/assign-id-to-marker-in-leaflet.html
                     }
+                  //  document.getElementById("albanese").onclick = function() {myFunction()};
+
+                  //  function myFunction() {
+                  //      L.marker([41.51177303, -81.61287287], {icon: mfarIcon}) .bindPopup("test") .addTo(map);
+                  //  }
+
                   </script>
                 </head>
                 <body onload="init()">
@@ -271,6 +277,12 @@
 </div>
 </div>
 </div>
+
+<script>
+    albanese.on("click", function(){
+      L.marker([41.51177303, -81.61287287], {icon: mfarIcon}) .bindPopup("test") .addTo(map);
+    })
+</script>
 
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 

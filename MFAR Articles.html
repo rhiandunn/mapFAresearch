@@ -218,15 +218,121 @@
                             popupAnchor:  [3, -36],
                             className: 'dot'
                       });
+//Albanese
+                      // Define a function to remove all existing markers and create new ones
+                      function albanese() {
+                          // Remove all existing markers from the map
+                          map.eachLayer(function(layer) {
+                              if (layer instanceof L.Marker) {
+                                  map.removeLayer(layer);
+                              }
+                          });
 
-                  //  var  test = L.marker([41.51177303, -81.61287287], {icon: mfarIcon}) .bindPopup("test") .addTo(map);
-//The code I need for linking text to map http://www.java2s.com/example/javascript/leaflet/assign-id-to-marker-in-leaflet.html
+                          // Iterate over map layers and remove all popups
+                          map.eachLayer(function(layer) {
+                              if (layer instanceof L.Popup) {
+                                  map.removeLayer(layer);
+                              }
+                          });
+
+                          // Create new markers at specific coordinates
+                          var //Bass = L.marker([35.94152828, -83.94036107], {icon: mfarIcon}) .bindPopup('<b>University of Tennessee, Knoxville, Donated Skeletal Collection</b> <br> Forensic Anthropology Center <br> University of Tennessee, Knoxville') .addTo(map),
+                                //HamannTodd = L.marker([41.51177303, -81.61287287], {icon: mfarIcon}) .bindPopup('<b>Hamann-Todd Osteological Collection</b> <br> Physical Anthropology Collection <br> Cleveland Museum of Natural History') .addTo(map),
+                                Terry = L.marker([38.8915, -77.02616196], {icon: mfarIcon}) .bindPopup('<b>Robert J. Terry Anatomical Collection</b> <br> Department of Anthropology <br> National Museum of Natural History <br> Smithsonian Institution') .addTo(map);
+                                //Maxwell = L.marker([35.0852212, -106.6251185], {icon: mfarIcon}) .bindPopup('<b>Maxwell Museum Documented Skeletal Collection</b> <br> Maxwell Museum of Anthropology <br> University of New Mexico') .addTo(map);
+
+                          var popup = L.popup({
+                                closeButton: false,
+                                closeOnClick: false,
+                                autoClose: false
+                              })
+                              .setLatLng([39.239062, -97.116138])
+                              .setContent('<b>Other Collections Used in Study:</b> <br> Forensic Anthropology Databank <br> Lisbon Collection, Portugal')
+                              .openOn(map);
+                          }
+
+                      // Create a hyperlink that displays the marker when clicked
+                      var link = document.getElementById('albanese');
+                      link.href = '#';
+                      link.addEventListener('click', albanese);
+
+//Berg1
+                      // Define a function to remove all existing markers and create new ones
+                      function berg1() {
+                          // Remove all existing markers from the map
+                          map.eachLayer(function(layer) {
+                              if (layer instanceof L.Marker) {
+                                  map.removeLayer(layer);
+                              }
+                          });
+
+                          // Iterate over map layers and remove all popups
+                          map.eachLayer(function(layer) {
+                              if (layer instanceof L.Popup) {
+                                  map.removeLayer(layer);
+                              }
+                          });
+
+                          // Create new markers at specific coordinates
+                          var //Bass = L.marker([35.94152828, -83.94036107], {icon: mfarIcon}) .bindPopup('<b>University of Tennessee, Knoxville, Donated Skeletal Collection</b> <br> Forensic Anthropology Center <br> University of Tennessee, Knoxville') .addTo(map),
+                            //    HamannTodd = L.marker([41.51177303, -81.61287287], {icon: mfarIcon}) .bindPopup('<b>Hamann-Todd Osteological Collection</b> <br> Physical Anthropology Collection <br> Cleveland Museum of Natural History') .addTo(map),
+                                Terry = L.marker([38.8915, -77.02616196], {icon: mfarIcon}) .bindPopup('<b>Robert J. Terry Anatomical Collection</b> <br> Department of Anthropology <br> National Museum of Natural History <br> Smithsonian Institution') .addTo(map);
+                              //  Maxwell = L.marker([35.0852212, -106.6251185], {icon: mfarIcon}) .bindPopup('<b>Maxwell Museum Documented Skeletal Collection</b> <br> Maxwell Museum of Anthropology <br> University of New Mexico') .addTo(map);
+
+                          var popup = L.popup({
+                                closeButton: false,
+                                closeOnClick: false,
+                                autoClose: false
+                              })
+                              .setLatLng([39.239062, -97.116138])
+                              .setContent('<b>Other Collections Used in Study:</b> <br> Balkan Sample')
+                              .openOn(map);
+                      }
+
+                      // Create a hyperlink that displays the marker when clicked
+                      var link = document.getElementById('berg1');
+                      link.href = '#';
+                      link.addEventListener('click', berg1);
+
+//Berg2
+                    // Define a function to remove all existing markers and create new ones
+                    function berg2() {
+                        // Remove all existing markers from the map
+                        map.eachLayer(function(layer) {
+                            if (layer instanceof L.Marker) {
+                                map.removeLayer(layer);
+                            }
+                        });
+
+                        // Iterate over map layers and remove all popups
+                        map.eachLayer(function(layer) {
+                            if (layer instanceof L.Popup) {
+                                map.removeLayer(layer);
+                            }
+                        });
+
+                        // Create new markers at specific coordinates
+                        var Bass = L.marker([35.94152828, -83.94036107], {icon: mfarIcon}) .bindPopup('<b>University of Tennessee, Knoxville, Donated Skeletal Collection</b> <br> Forensic Anthropology Center <br> University of Tennessee, Knoxville') .addTo(map),
+                            //  HamannTodd = L.marker([41.51177303, -81.61287287], {icon: mfarIcon}) .bindPopup('<b>Hamann-Todd Osteological Collection</b> <br> Physical Anthropology Collection <br> Cleveland Museum of Natural History') .addTo(map),
+                              Terry = L.marker([38.8915, -77.02616196], {icon: mfarIcon}) .bindPopup('<b>Robert J. Terry Anatomical Collection</b> <br> Department of Anthropology <br> National Museum of Natural History <br> Smithsonian Institution') .addTo(map);
+                            //  Maxwell = L.marker([35.0852212, -106.6251185], {icon: mfarIcon}) .bindPopup('<b>Maxwell Museum Documented Skeletal Collection</b> <br> Maxwell Museum of Anthropology <br> University of New Mexico') .addTo(map);
+
+                        var popup = L.popup({
+                              closeButton: false,
+                              closeOnClick: false,
+                              autoClose: false
+                            })
+                          .setLatLng([39.239062, -97.116138])
+                          .setContent('<b>Other Collections Used in Study:</b> <br> Memphis Collection <br> UTK Forensic Collection <br> CILHI Collection <br> Uyak Bay, Kodiak Island <br> FAFG Cases <br> Larson Site (39WW2) <br> Maxwell Museum, ASU <br> Cheoung Ek <br> Khon Kaen University <br> Chungbuk National University <br> Yonsei University Dental School')
+                          .openOn(map);
                     }
-                  //  document.getElementById("albanese").onclick = function() {myFunction()};
 
-                  //  function myFunction() {
-                  //      L.marker([41.51177303, -81.61287287], {icon: mfarIcon}) .bindPopup("test") .addTo(map);
-                  //  }
+                    // Create a hyperlink that displays the marker when clicked
+                    var link = document.getElementById('berg2');
+                    link.href = '#';
+                    link.addEventListener('click', berg2);
+
+                    }
 
                   </script>
                 </head>

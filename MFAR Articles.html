@@ -97,6 +97,10 @@
               background-color: #eee;
             }
 
+            #myUL li.clicked {
+              background-color: #ddd;
+            }
+
           .col-md-5 {
               height: 500px;
               overflow-y: scroll;
@@ -177,6 +181,10 @@
                       li[i].style.display = "none";
                   }
               }
+          }
+          function toggleList() {
+            var list = document.getElementById("myUL");
+            list.classList.toggle("clicked");
           }
           </script>
         </div>

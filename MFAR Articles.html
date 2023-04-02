@@ -102,6 +102,12 @@
               overflow-y: scroll;
             }
 
+          @media screen and (max-width: 767px) {
+                .col-md-5 {
+                  margin-bottom: 40px;
+                }
+              }
+
             </style>
             </head>
             <body>
@@ -1797,12 +1803,6 @@
 </div>
 </div>
 </div>
-
-<script>
-    albanese.on("click", function(){
-      L.marker([41.51177303, -81.61287287], {icon: mfarIcon}) .bindPopup("test") .addTo(map);
-    })
-</script>
 
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 

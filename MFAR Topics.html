@@ -239,6 +239,7 @@
       //    }).addTo(map);
 
       // Creating custom markers
+// Icon design https://leafletjs.com/examples/custom-icons/
 
       var topicsIcon = L.Icon.extend({
             options: {
@@ -260,7 +261,7 @@
             stat1Icon = new topicsIcon({iconUrl: 'assets/img/stat1.png'}),
             stat3Icon = new topicsIcon({iconUrl: 'assets/img/stat3.png'});
 
-
+//Layer group code https://leafletjs.com/examples/layers-control/
           // Creating markers
          var  ageHamannTodd = L.marker([41.51177303, -81.61287287], {icon: age3Icon}) .bindPopup("Hamann Todd Osteological Collection"),
               ageTerry = L.marker([38.8915, -77.02616196], {icon: age6Icon}) .bindPopup("Robert J. Terry Anatomical Collection"),

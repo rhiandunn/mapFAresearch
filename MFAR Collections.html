@@ -29,6 +29,8 @@
       <h1 style="margin-top: 24px;text-align: center;margin-bottom: 40px;">United States Based Skeletal Collections</h1>
     </head>
 
+  <p style="margin-top: 24px;text-align: center;margin-bottom: 15px;">Click to learn more about each United States-based Documented Skeletal Collection</p>
+
     <div class="container">
         <div class="row">
             <div class="col-md-5">
@@ -41,7 +43,6 @@
               /* Style the tab */
               .tab {
                 overflow: hidden;
-                position: absolute;
                 border: 1px solid #ccc;
                 background-color: #f1f1f1;
               }
@@ -71,16 +72,15 @@
               /* Style the tab content */
               .tabcontent {
                 display: none;
-                padding: 65px 12px;
+                padding: 10px 12px;
                 -webkit-animation: fadeEffect 1s;
                 animation: fadeEffect 1s;
-                height: 436px;
-                overflow-y: scroll;
               }
 
-              .scroll {
-                padding: 65px;
-              }
+              .col-md-5 {
+                  height: 500px;
+                  overflow-y: scroll;
+                }
 
               /* Fade in tabs */
               @-webkit-keyframes fadeEffect {
@@ -102,8 +102,6 @@
               </style>
               </head>
               <body>
-
-              <p>Click to learn more about each United States-based Documented Skeletal Collection</p>
 
               <div class="tab">
                 <button class="tablinks" onclick="openCity(event, 'Terry')" id="defaultOpen">Terry</button>

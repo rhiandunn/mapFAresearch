@@ -104,10 +104,10 @@
               <body>
 
               <div class="tab">
-                <button class="tablinks" onclick="openCity(event, 'Terry')" id="defaultOpen">Terry</button>
-                <button class="tablinks" onclick="openCity(event, 'HamannTodd')">Hamann-Todd</button>
-                <button class="tablinks" onclick="openCity(event, 'UTK')">UT Knoxville</button>
-                <button class="tablinks" onclick="openCity(event, 'Maxwell')">Maxwell</button>
+                <button id = "terry" class="tablinks" onclick="openCity(event, 'Terry')">Terry</button>
+                <button id = "ht" class="tablinks" onclick="openCity(event, 'HamannTodd')">Hamann-Todd</button>
+                <button id = "bass" class="tablinks" onclick="openCity(event, 'UTK')">UT Knoxville</button>
+                <button id = "maxwell" class="tablinks" onclick="openCity(event, 'Maxwell')">Maxwell</button>
               </div>
 
               <div id="Terry" class="tabcontent">
@@ -163,7 +163,7 @@
                 evt.currentTarget.className += " active";
               }
               // Get the element with id="defaultOpen" and click on it
-document      .getElementById("defaultOpen").click();
+document      .getElementById("terry").click();
               </script>
 
               </body>
@@ -271,6 +271,90 @@ document      .getElementById("defaultOpen").click();
                       var polygonGroup = L.layerGroup([tnpolygon, ohpolygon, mopolygon, nmpolygon]);
 
                       layerGroup.addLayer(polygonGroup);
+
+//Terry
+        // Define a function to remove all existing markers and create new ones
+        function terry() {
+          // Iterate over map layers and remove all popups
+            map.eachLayer(function(layer) {
+                if (layer instanceof L.Popup) {
+                    map.removeLayer(layer);
+                }
+            });
+
+            var popup = L.popup({offset: [0,-26]})
+                .setLatLng([38.8915, -77.02616196])
+                .setContent('<b>Robert J. Terry Anatomical Collection</b> <br> Department of Anthropology <br> National Museum of Natural History <br> Smithsonian Institution')
+                .openOn(map);
+            }
+
+            // Create a hyperlink that displays the marker when clicked
+            var link = document.getElementById('terry');
+            link.href = '#';
+            link.addEventListener('click', terry);
+
+//HT
+        // Define a function to remove all existing markers and create new ones
+        function ht() {
+          // Iterate over map layers and remove all popups
+            map.eachLayer(function(layer) {
+                if (layer instanceof L.Popup) {
+                    map.removeLayer(layer);
+                }
+            });
+
+            var popup = L.popup({offset: [0,-26]})
+                .setLatLng([41.51177303, -81.61287287])
+                .setContent('<b>Hamann-Todd Osteological Collection</b> <br> Physical Anthropology Collection <br> Cleveland Museum of Natural History')
+                .openOn(map);
+            }
+
+            // Create a hyperlink that displays the marker when clicked
+            var link = document.getElementById('ht');
+            link.href = '#';
+            link.addEventListener('click', ht);
+
+//Bass
+        // Define a function to remove all existing markers and create new ones
+        function bass() {
+          // Iterate over map layers and remove all popups
+            map.eachLayer(function(layer) {
+                if (layer instanceof L.Popup) {
+                    map.removeLayer(layer);
+                }
+            });
+
+            var popup = L.popup({offset: [0,-26]})
+                .setLatLng([35.94152828, -83.94036107])
+                .setContent('<b>University of Tennessee, Knoxville, Donated Skeletal Collection</b> <br> Forensic Anthropology Center <br> University of Tennessee, Knoxville')
+                .openOn(map);
+            }
+
+            // Create a hyperlink that displays the marker when clicked
+            var link = document.getElementById('bass');
+            link.href = '#';
+            link.addEventListener('click', bass);
+
+//Maxwell
+            // Define a function to remove all existing markers and create new ones
+            function maxwell() {
+              // Iterate over map layers and remove all popups
+                map.eachLayer(function(layer) {
+                    if (layer instanceof L.Popup) {
+                        map.removeLayer(layer);
+                    }
+                });
+
+                var popup = L.popup({offset: [0,-26]})
+                    .setLatLng([35.0852212, -106.6251185])
+                    .setContent('<b>Maxwell Museum Documented Skeletal Collection</b> <br> Maxwell Museum of Anthropology <br> University of New Mexico')
+                    .openOn(map);
+                }
+
+                // Create a hyperlink that displays the marker when clicked
+                var link = document.getElementById('maxwell');
+                link.href = '#';
+                link.addEventListener('click', maxwell);
 
                     }
                   </script>

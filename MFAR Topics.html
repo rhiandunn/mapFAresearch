@@ -88,11 +88,11 @@
       <!--    <h3>Filter By Article Topic</h3> -->
 
           <div id="myBtnContainer">
-            <button class="btn active" onclick="filterSelection('all')">Show all</button>
-            <button class="btn" onclick="filterSelection('Age')"> Age</button>
-            <button class="btn" onclick="filterSelection('Population Affinity')"> Population Affinity</button>
-            <button class="btn" onclick="filterSelection('Sex')"> Sex</button>
-            <button class="btn" onclick="filterSelection('Stature')"> Stature</button>
+            <button id ="all" class="btn active" onclick="filterSelection('all')">Show all</button>
+            <button id = "age" class="btn" onclick="filterSelection('Age')"> Age</button>
+            <button id = "pop" class="btn" onclick="filterSelection('Population Affinity')"> Population Affinity</button>
+            <button id = "sex" class="btn" onclick="filterSelection('Sex')"> Sex</button>
+            <button id = "stat" class="btn" onclick="filterSelection('Stature')"> Stature</button>
           </div>
 
           <div class="container">
@@ -265,37 +265,126 @@
 
 //Layer group code https://leafletjs.com/examples/layers-control/
           // Creating markers
-         var  ageHamannTodd = L.marker([41.51177303, -81.61287287], {icon: age3Icon}) .bindPopup("Hamann Todd Osteological Collection"),
-              ageTerry = L.marker([38.8915, -77.02616196], {icon: age6Icon}) .bindPopup("Robert J. Terry Anatomical Collection"),
-              ageBass = L.marker([35.94152828, -83.94036107], {icon: age9Icon}) .bindPopup("University of Tennessee, Knoxville, Donated Skeletal Collection"),
-              //pop
-              popHamannTodd = L.marker([41.51177303, -81.61287287], {icon: pop3Icon}) .bindPopup("Hamann Todd Osteological Collection"),
-              popBass = L.marker([35.94152828, -83.94036107], {icon: pop6Icon}) .bindPopup("University of Tennessee, Knoxville, Donated Skeletal Collection"),
-              popTerry = L.marker([38.8915, -77.02616196], {icon: pop7Icon}) .bindPopup("Robert J. Terry Anatomical Collection"),
-              //sex
-              sexMaxwell = L.marker([35.0852212, -106.6251185], {icon: sex2Icon}) .bindPopup("Maxwell Museum Documented Skeletal Collection"),
-              sexTerry = L.marker([38.8915, -77.02616196], {icon: sex7Icon}) .bindPopup("Robert J. Terry Anatomical Collection"),
-              sexBass = L.marker([35.94152828, -83.94036107], {icon: sex8Icon}) .bindPopup("University of Tennessee, Knoxville, Donated Skeletal Collection"),
-              sexHamannTodd = L.marker([41.51177303, -81.61287287], {icon: sex9Icon}) .bindPopup("Hamann Todd Osteological Collection"),
-              //stat
-              statBass = L.marker([35.94152828, -83.94036107], {icon: stat1Icon}) .bindPopup("University of Tennessee, Knoxville, Donated Skeletal Collection"),
-              statTerry = L.marker([38.8915, -77.02616196], {icon: stat3Icon}) .bindPopup("Robert J. Terry Anatomical Collection");
+      //   var  ageHamannTodd = L.marker([41.51177303, -81.61287287], {icon: age3Icon}) .bindPopup("Hamann Todd Osteological Collection"),
+      //        ageTerry = L.marker([38.8915, -77.02616196], {icon: age6Icon}) .bindPopup("Robert J. Terry Anatomical Collection"),
+      //        ageBass = L.marker([35.94152828, -83.94036107], {icon: age9Icon}) .bindPopup("University of Tennessee, Knoxville, Donated Skeletal Collection"),
+      //        //pop
+      //        popHamannTodd = L.marker([41.51177303, -81.61287287], {icon: pop3Icon}) .bindPopup("Hamann Todd Osteological Collection"),
+      //        popBass = L.marker([35.94152828, -83.94036107], {icon: pop6Icon}) .bindPopup("University of Tennessee, Knoxville, Donated Skeletal Collection"),
+      //        popTerry = L.marker([38.8915, -77.02616196], {icon: pop7Icon}) .bindPopup("Robert J. Terry Anatomical Collection"),
+      //        //sex
+      //        sexMaxwell = L.marker([35.0852212, -106.6251185], {icon: sex2Icon}) .bindPopup("Maxwell Museum Documented Skeletal Collection"),
+      //        sexTerry = L.marker([38.8915, -77.02616196], {icon: sex7Icon}) .bindPopup("Robert J. Terry Anatomical Collection"),
+      //        sexBass = L.marker([35.94152828, -83.94036107], {icon: sex8Icon}) .bindPopup("University of Tennessee, Knoxville, Donated Skeletal Collection"),
+      //        sexHamannTodd = L.marker([41.51177303, -81.61287287], {icon: sex9Icon}) .bindPopup("Hamann Todd Osteological Collection"),
+      //        //stat
+      //        statBass = L.marker([35.94152828, -83.94036107], {icon: stat1Icon}) .bindPopup("University of Tennessee, Knoxville, Donated Skeletal Collection"),
+      //        statTerry = L.marker([38.8915, -77.02616196], {icon: stat3Icon}) .bindPopup("Robert J. Terry Anatomical Collection");
 
 
           // Creating layer group
-          var layerGroup = L.layerGroup([ageHamannTodd, ageTerry, ageBass]);
-          var layerGroup2 = L.layerGroup([popHamannTodd, popBass, popTerry]);
-          var layerGroup3 = L.layerGroup([sexMaxwell, sexTerry, sexBass, sexHamannTodd]);
-          var layerGroup4 = L.layerGroup([statBass, statTerry]);
+      //    var layerGroup = L.layerGroup([ageHamannTodd, ageTerry, ageBass]);
+      //    var layerGroup2 = L.layerGroup([popHamannTodd, popBass, popTerry]);
+      //    var layerGroup3 = L.layerGroup([sexMaxwell, sexTerry, sexBass, sexHamannTodd]);
+      //    var layerGroup4 = L.layerGroup([statBass, statTerry]);
 
-          var overlayMaps = {
-              "Age": layerGroup,
-              "Population Affinity": layerGroup2,
-              "Sex": layerGroup3,
-              "Stature": layerGroup4
-          };
+      //    var overlayMaps = {
+      //        "Age": layerGroup,
+      //        "Population Affinity": layerGroup2,
+      //        "Sex": layerGroup3,
+      //        "Stature": layerGroup4
+      //    };
 
-          var layerControl = L.control.layers(overlayMaps).addTo(map);
+      //    var layerControl = L.control.layers(overlayMaps).addTo(map);
+
+  //age
+            // Define a function to remove all existing markers and create new ones
+            function age() {
+                // Remove all existing markers from the map
+                map.eachLayer(function(layer) {
+                    if (layer instanceof L.Marker) {
+                        map.removeLayer(layer);
+                    }
+                });
+
+                // Create new markers at specific coordinates
+                var  ageHamannTodd = L.marker([41.51177303, -81.61287287], {icon: age3Icon}) .bindPopup("Hamann Todd Osteological Collection") .addTo(map),
+                     ageTerry = L.marker([38.8915, -77.02616196], {icon: age6Icon}) .bindPopup("Robert J. Terry Anatomical Collection") .addTo(map),
+                     ageBass = L.marker([35.94152828, -83.94036107], {icon: age9Icon}) .bindPopup("University of Tennessee, Knoxville, Donated Skeletal Collection") .addTo(map);
+
+                }
+
+            // Create a hyperlink that displays the marker when clicked
+            var link = document.getElementById('age');
+            link.href = '#';
+            link.addEventListener('click', age);
+
+//populations
+          // Define a function to remove all existing markers and create new ones
+          function pop() {
+              // Remove all existing markers from the map
+              map.eachLayer(function(layer) {
+                  if (layer instanceof L.Marker) {
+                      map.removeLayer(layer);
+                  }
+              });
+
+              // Create new markers at specific coordinates
+              var  popHamannTodd = L.marker([41.51177303, -81.61287287], {icon: pop3Icon}) .bindPopup("Hamann Todd Osteological Collection") .addTo(map),
+                   popBass = L.marker([35.94152828, -83.94036107], {icon: pop6Icon}) .bindPopup("University of Tennessee, Knoxville, Donated Skeletal Collection") .addTo(map),
+                   popTerry = L.marker([38.8915, -77.02616196], {icon: pop7Icon}) .bindPopup("Robert J. Terry Anatomical Collection") .addTo(map);
+
+              }
+
+          // Create a hyperlink that displays the marker when clicked
+          var link = document.getElementById('pop');
+          link.href = '#';
+          link.addEventListener('click', pop);
+
+//sex
+        // Define a function to remove all existing markers and create new ones
+        function sex() {
+            // Remove all existing markers from the map
+            map.eachLayer(function(layer) {
+                if (layer instanceof L.Marker) {
+                    map.removeLayer(layer);
+                }
+            });
+
+            // Create new markers at specific coordinates
+            var  sexMaxwell = L.marker([35.0852212, -106.6251185], {icon: sex2Icon}) .bindPopup("Maxwell Museum Documented Skeletal Collection") .addTo(map),
+                 sexTerry = L.marker([38.8915, -77.02616196], {icon: sex7Icon}) .bindPopup("Robert J. Terry Anatomical Collection") .addTo(map),
+                 sexBass = L.marker([35.94152828, -83.94036107], {icon: sex8Icon}) .bindPopup("University of Tennessee, Knoxville, Donated Skeletal Collection") .addTo(map),
+                 sexHamannTodd = L.marker([41.51177303, -81.61287287], {icon: sex9Icon}) .bindPopup("Hamann Todd Osteological Collection") .addTo(map);
+
+            }
+
+        // Create a hyperlink that displays the marker when clicked
+        var link = document.getElementById('sex');
+        link.href = '#';
+        link.addEventListener('click', sex);
+
+//stature
+      // Define a function to remove all existing markers and create new ones
+      function stat() {
+          // Remove all existing markers from the map
+          map.eachLayer(function(layer) {
+              if (layer instanceof L.Marker) {
+                  map.removeLayer(layer);
+              }
+          });
+
+          // Create new markers at specific coordinates
+          var  statBass = L.marker([35.94152828, -83.94036107], {icon: stat1Icon}) .bindPopup("University of Tennessee, Knoxville, Donated Skeletal Collection") .addTo(map),
+               statTerry = L.marker([38.8915, -77.02616196], {icon: stat3Icon}) .bindPopup("Robert J. Terry Anatomical Collection") .addTo(map);
+
+          }
+
+      // Create a hyperlink that displays the marker when clicked
+      var link = document.getElementById('stat');
+      link.href = '#';
+      link.addEventListener('click', stat);
+
         }
 
       </script>

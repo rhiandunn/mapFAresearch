@@ -100,11 +100,12 @@
               background-color: #eee;
             }
 
-            #myUL li.clicked {
-              background-color: #ddd;
+            .selected {
+              background-color: black;
+              color: red;
             }
 
-          .col-md-5 {
+           .col-md-5 {
               height: 500px;
               overflow-y: scroll;
             }
@@ -120,51 +121,51 @@
             <body>
 
             <ul id="myUL">
-              <li id="albanese"><a href="#">Albanese J, Tuck A, Gomes J, Cardoso HFV (2016). An alternative approach for estimating stature from long bones that is not population- or group-specific. <i>Forensic Science International</i>, 259:59-68.</a></li>
-              <li id="berg1"><a href="#">Berg GE (2008). Pubic Bone Age Estimation in Adult Women. <i>Journal of Forensic Sciences</i>, 53(3):569-577.</a></li>
-              <li id="berg2"><a href="#">Berg GE, Kenyhercz MW (2017). Introducing Human Mandible Identification [(hu)MANid]: A Free, Web-Based GUI to Classify Human Mandibles. <i>Journal of Forensic Sciences</i>, 62(6):1592-1598.</a></li>
-              <li id="best"><a href="#">Best KC, Garvin HM, Cabo LL (2018). An Investigation into the Relationship between Human Cranial and Pelvic Sexual Dimorphism. <i>Journal of Forensic Sciences</i>, 63(4):990-1000.</a></li>
-              <li id="bruzek"><a href="#">Brůzek J, Santos F, Dutailly B, Murail P, Cunha E (2017). Validation and reliability of the sex estimation of the human os coxae using freely available DSP2 software for bioarchaeology and forensic anthropology. <i>American Journal of Biological Anthropology</i>, 164(2):440-449. </a></li>
-              <li id="dudzik"><a href="#">Dudzik B, Langley NR (2015). Estimating age from the pubic symphysis: A new component-based system. <i>Forensic Science International</i>, 257:98-105.</a></li>
-              <li id="duray"><a href="#">Duray SM, Morter HB, Smith FJ (1999). Morphological Variation in Cervical Spinous Processes: Potential Applications in the Forensic Identification of Race from the Skeleton. <i>Journal of Forensic Sciences</i>, 44(5):937-44.</a></li>
-              <li id="garvin"><a href="#">Garvin HM, Sholts SB, Mosca LA (2014). Sexual Dimorphism in Human Cranial Trait Scores: Effects of Population, Age, and Body Size. <i>American Journal of Biological Anthropology</i>, 154(2):259-269.</a></li>
-              <li id="hefner1"><a href="#">Hefner JT (2009). Cranial Nonmetric Variation and Estimating Ancestry. <i>Journal of Forensic Sciences</i>, 54(5):985-995.</a></li>
-              <li id="hefner2"><a href="#">Hefner JT, Ousley SD (2014). Statistical Classification Methods for Estimating Ancestry Using Morphoscopic Traits. <i>Journal of Forensic Sciences</i>, 59(4):883-890.</a></li>
-              <li id="hefner3"><a href="#">Hefner JT, Pilloud MA, Black CJ, Anderson BE (2015). Morphoscopic Trait Expression in Hispanic Populations <i>Journal of Forensic Sciences</i>, 60(5):1135-1139.</a></li>
-              <li id="hefner4"><a href="#">Hefner JT, Spradley MK, Anderson BE (2014). Ancestry Assessment Using Random Forest Modeling <i>Journal of Forensic Sciences</i>, 59(3):583-589.</a></li>
-              <li id="jung"><a href="#">Jung H, Woo EJ (2016). Evaluation of Mastoid Process as Sex Indicator in Modern White Americans using Geometric Morphometrics. <i>Journal of Forensic Sciences</i>, 61(4):1024-1033.</a></li>
-              <li id="kamnikar"><a href="#">Kamnikar KR, Plemons AM, Hefner JT (2017). Intraobserver Error in Macromorphoscopic Trait Data. <i>Journal of Forensic Sciences</i>, 63(2):361-370.</a></li>
-              <li id="kenyhercz1"><a href="#">Kenyhercz MW, Klales AR, Rainwater CW, Fredette SM (2016). The Optimized Summed Scored Attributes Method for the Classification of U.S. Blacks and Whites: A Validation Study. <i>Journal of Forensic Sciences</i>, 62(1):174-180.</a></li>
-              <li id="kenyhercz2"><a href="#">Kenyhercz MW, Klales AR, Stull KE, McCormicka KA, Cole SJ (2017). Worldwide population variation in pelvic sexual dimorphism: A validation and recalibration of the Klales et al. method. <i>Forensic Science International</i>, 277:259.e1-259.e8.</a></li>
-              <li id="kilmer"><a href="#">Kilmer K, Garvin H (2020). Outline analysis of sex and population variation in greater sciatic notch and obturator foramen morphology with implications for sex estimation. <i>Forensic Science International</i>, 314:1103446.</a></li>
-              <li id="kimmerle"><a href="#">Kimmerle EH, Ross A, Slice D (2008). Sexual Dimorphism in America: Geometric Morphometric Analysis of the Craniofacial Region. <i>Journal of Forensic Sciences</i>, 52(1):54-57.</a></li>
-              <li id="klales1"><a href="#">Klales AR (2016). Secular Change in Morphological Pelvic Traits used for Sex Estimation. <i>Journal of Forensic Sciences</i>, 61(2):295-201.</a></li>
-              <li id="klales2"><a href="#">Klales AR, Kenyhercz MW (2015). Morphological Assessment of Ancestry Using Cranial Macromorphoscopics. <i>Journal of Forensic Sciences</i>, 60(1):13-20.</a></li>
-              <li id="klales3"><a href="#">Klales AR, Ousley SD, Vollner JM (2012). A Revised Method of Sexing the Human Innominate Using Phenice’s Nonmetric Traits and Statistical Methods. <i>American Journal of Biological Anthropology</i>, 149(1):104-114.</a></li>
-              <li id="konigsberg"><a href="#">Konigsberg LW, Herrmann NP, Wescott DJ, Kimmerle EH (2008). Estimation and Evidence in Forensic Anthropology: Age-at-Death. <i>Journal of Forensic Sciences</i>, 53(3):541-557.</a></li>
-              <li id="langley"><a href="#">Langley-Shirley N, Jantz RL (2010). A Bayesian Approach to Age Estimation in Modern Americans from the Clavicle. <i>Journal of Forensic Sciences</i>, 55(3):571-583.</a></li>
-              <li id="lewis"><a href="#">Lewis CJ, Garvin HM (2016). Reliability of the Walker Cranial Nonmetric Method and Implications for Sex Estimation. <i>Journal of Forensic Sciences</i>, 61(3):743-751.</a></li>
-              <li id="listi"><a href="#">Listi GA (2016). The Use of Entheseal Changes in the Femur and Os Coxa for Age Assessment. <i>Journal of Forensic Sciences</i>, 61(1):12-18.</a></li>
-              <li id="lovejoy"><a href="#">Lovejoy CO, Meindl RS, Pryzbeck TR, Mensforth RP (1985). Chronological Metamorphosis of the Auricular Surface of the Ilium: A New Method for the Determination of Adult Skeletal Age at Death. <i>American Journal of Biological Anthropology</i>, 68(1):15-28.</a></li>
-              <li id="maijanen"><a href="#">Maijanen H (2009). Testing Anatomical Methods for Stature Estimation on Individuals from the W. M. Bass Donated Skeletal Collection. <i>Journal of Forensic Sciences</i>, 54(4):746-752.</a></li>
-              <li id="meeusen"><a href="#">Meeusen RA, Christensen AM, Hefner JT (2015). The Use of Femoral Neck Axis Length to Estimate Sex and Ancestry. <i>Journal of Forensic Sciences</i>, 60(5):1300-1304.</a></li>
-              <li id="merritt"><a href="#">Merritt CE (2015). The Influence of Body Size on Adult Skeletal Age Estimation Methods. <i>American Journal of Biological Anthropology</i>, 156(1):35-57.</a></li>
-              <li id="milner"><a href="#">Milner GR, Boldsen JL (2012). Transition Analysis: A Validation Study With Known-Age Modern American Skeletons. <i>American Journal of Biological Anthropology</i>, 148(1):98-110.</a></li>
-              <li id="miranker"><a href="#">Miranker M (2016). A Comparison of Different Age Estimation Methods of the Adult Pelvis. <i>Journal of Forensic Sciences</i>, 61(5):1173-1179.</a></li>
-              <li id="murail"><a href="#">Murail P, Brůzek J, Houet F, Cunha E (2005). DSP: A Tool for Probabiliistic Sex Diagnosis Using Worldwide Variability in Hip-Bone Measurements. <i>Bulletins et Mémoires de la Société d’Anthropologie de Paris</i>, 17(3-4):167-176.</a></li>
-              <li id="osborne"><a href="#">Osborne DL, Simmons TL, Nawrocki SP (2004). Reconsidering the Auricular Surface as an Indicator of Age at Death. <i>Journal of Forensic Sciences</i>, 49(5):905-911.</a></li>
-              <li id="ousley"><a href="#">Ousley S (1995). Should We Estimate Biological or Forensic Stature? <i>Journal of Forensic Sciences</i>, 40:768-773.</a></li>
-              <li id="parr"><a href="#">Parr NM, Passalacqua NV, Skorpinski (2017). Investigations Into Age-related Changes in the Human Mandible. <i>Journal of Forensic Sciences</i>, 62(6):1586-1591.</a></li>
-              <li id="phenice"><a href="#">Phenice TW (1920). A Newly Developed Visual Method of Sexing the 0s Pubis. <i>American Journal of Biological Anthropology</i>, 30(2):297-301.</a></li>
-              <li id="prince"><a href="#">Prince DA, Ubelaker DH (2002). Application of Lamendin’s Adult Dental Aging Technique to a Diverse Skeletal Sample. <i>Journal of Forensic Sciences</i>, 47(1):107-116.</a></li>
-              <li id="raxter"><a href="#">Raxter MH, Auerbach BM, Ruff CB (2006). Revision of the Fully Technique for Estimating Statures. <i>American Journal of Biological Anthropology</i>, 130(3):374-384.</a></li>
-              <li id="santos"><a href="#">Santos F, Guyomarc'h P, Brůzek J (2014). Statistical sex determination from craniometrics: Comparison of linear discriminant analysis, logistic regression, and support vector machines. <i>Forensic Science International</i>, 245:204.e1-204.e8.</a></li>
-              <li id="snodgrass"><a href="#">Snodgrass JJ (2004). Sex Differences and Aging of the Vertebral Column. <i>Journal of Forensic Sciences</i>, 49(3):458-463.</a></li>
-              <li id="spiros"><a href="#">Spiros MC, Hefner JT (2019). Ancestry Estimation Using Cranial and Postcranial Macromorphoscopic Traits. <i>Journal of Forensic Sciences</i>, 65(3):921-929.</a></li>
-              <li id="todd"><a href="#">Todd TW (1920). Age Changes in the Pubic Bone. <i>American Journal of Biological Anthropology</i>, 3(3):285-334.</a></li>
-              <li id="walker"><a href="#">Walker PL (2008). Sexing Skulls Using Discriminant Function Analysis of Visually Assessed Traits. <i>American Journal of Biological Anthropology</i>, 136(1):39-50.</a></li>
-              <li id="wescott"><a href="#">Wescott DJ (2005). Population Variation in Femur Subtrochanteric Shape. <i>Journal of Forensic Sciences</i>, 50(2):286-293.</a></li>
-              <li id="winburn"><a href="#">Winburn AP, Stock MK (2019). Reconsidering osteoarthritis as a skeletal indicator of age at death. <i>American Journal of Biological Anthropology</i>, 170(3):459-473.</a></li>
+              <li id="albanese"><a href="#" onclick="return false;">Albanese J, Tuck A, Gomes J, Cardoso HFV (2016). An alternative approach for estimating stature from long bones that is not population- or group-specific. <i>Forensic Science International</i>, 259:59-68.</a></li>
+              <li id="berg1"><a href="#" onclick="return false;">Berg GE (2008). Pubic Bone Age Estimation in Adult Women. <i>Journal of Forensic Sciences</i>, 53(3):569-577.</a></li>
+              <li id="berg2"><a href="#" onclick="return false;">Berg GE, Kenyhercz MW (2017). Introducing Human Mandible Identification [(hu)MANid]: A Free, Web-Based GUI to Classify Human Mandibles. <i>Journal of Forensic Sciences</i>, 62(6):1592-1598.</a></li>
+              <li id="best"><a href="#" onclick="return false;">Best KC, Garvin HM, Cabo LL (2018). An Investigation into the Relationship between Human Cranial and Pelvic Sexual Dimorphism. <i>Journal of Forensic Sciences</i>, 63(4):990-1000.</a></li>
+              <li id="bruzek"><a href="#" onclick="return false;">Brůzek J, Santos F, Dutailly B, Murail P, Cunha E (2017). Validation and reliability of the sex estimation of the human os coxae using freely available DSP2 software for bioarchaeology and forensic anthropology. <i>American Journal of Biological Anthropology</i>, 164(2):440-449. </a></li>
+              <li id="dudzik"><a href="#" onclick="return false;">Dudzik B, Langley NR (2015). Estimating age from the pubic symphysis: A new component-based system. <i>Forensic Science International</i>, 257:98-105.</a></li>
+              <li id="duray"><a href="#" onclick="return false;">Duray SM, Morter HB, Smith FJ (1999). Morphological Variation in Cervical Spinous Processes: Potential Applications in the Forensic Identification of Race from the Skeleton. <i>Journal of Forensic Sciences</i>, 44(5):937-44.</a></li>
+              <li id="garvin"><a href="#" onclick="return false;">Garvin HM, Sholts SB, Mosca LA (2014). Sexual Dimorphism in Human Cranial Trait Scores: Effects of Population, Age, and Body Size. <i>American Journal of Biological Anthropology</i>, 154(2):259-269.</a></li>
+              <li id="hefner1"><a href="#" onclick="return false;">Hefner JT (2009). Cranial Nonmetric Variation and Estimating Ancestry. <i>Journal of Forensic Sciences</i>, 54(5):985-995.</a></li>
+              <li id="hefner2"><a href="#" onclick="return false;">Hefner JT, Ousley SD (2014). Statistical Classification Methods for Estimating Ancestry Using Morphoscopic Traits. <i>Journal of Forensic Sciences</i>, 59(4):883-890.</a></li>
+              <li id="hefner3"><a href="#" onclick="return false;">Hefner JT, Pilloud MA, Black CJ, Anderson BE (2015). Morphoscopic Trait Expression in Hispanic Populations <i>Journal of Forensic Sciences</i>, 60(5):1135-1139.</a></li>
+              <li id="hefner4"><a href="#" onclick="return false;">Hefner JT, Spradley MK, Anderson BE (2014). Ancestry Assessment Using Random Forest Modeling <i>Journal of Forensic Sciences</i>, 59(3):583-589.</a></li>
+              <li id="jung"><a href="#" onclick="return false;">Jung H, Woo EJ (2016). Evaluation of Mastoid Process as Sex Indicator in Modern White Americans using Geometric Morphometrics. <i>Journal of Forensic Sciences</i>, 61(4):1024-1033.</a></li>
+              <li id="kamnikar"><a href="#" onclick="return false;">Kamnikar KR, Plemons AM, Hefner JT (2017). Intraobserver Error in Macromorphoscopic Trait Data. <i>Journal of Forensic Sciences</i>, 63(2):361-370.</a></li>
+              <li id="kenyhercz1"><a href="#" onclick="return false;">Kenyhercz MW, Klales AR, Rainwater CW, Fredette SM (2016). The Optimized Summed Scored Attributes Method for the Classification of U.S. Blacks and Whites: A Validation Study. <i>Journal of Forensic Sciences</i>, 62(1):174-180.</a></li>
+              <li id="kenyhercz2"><a href="#" onclick="return false;">Kenyhercz MW, Klales AR, Stull KE, McCormicka KA, Cole SJ (2017). Worldwide population variation in pelvic sexual dimorphism: A validation and recalibration of the Klales et al. method. <i>Forensic Science International</i>, 277:259.e1-259.e8.</a></li>
+              <li id="kilmer"><a href="#" onclick="return false;">Kilmer K, Garvin H (2020). Outline analysis of sex and population variation in greater sciatic notch and obturator foramen morphology with implications for sex estimation. <i>Forensic Science International</i>, 314:1103446.</a></li>
+              <li id="kimmerle"><a href="#" onclick="return false;">Kimmerle EH, Ross A, Slice D (2008). Sexual Dimorphism in America: Geometric Morphometric Analysis of the Craniofacial Region. <i>Journal of Forensic Sciences</i>, 52(1):54-57.</a></li>
+              <li id="klales1"><a href="#" onclick="return false;">Klales AR (2016). Secular Change in Morphological Pelvic Traits used for Sex Estimation. <i>Journal of Forensic Sciences</i>, 61(2):295-201.</a></li>
+              <li id="klales2"><a href="#" onclick="return false;">Klales AR, Kenyhercz MW (2015). Morphological Assessment of Ancestry Using Cranial Macromorphoscopics. <i>Journal of Forensic Sciences</i>, 60(1):13-20.</a></li>
+              <li id="klales3"><a href="#" onclick="return false;">Klales AR, Ousley SD, Vollner JM (2012). A Revised Method of Sexing the Human Innominate Using Phenice’s Nonmetric Traits and Statistical Methods. <i>American Journal of Biological Anthropology</i>, 149(1):104-114.</a></li>
+              <li id="konigsberg"><a href="#" onclick="return false;">Konigsberg LW, Herrmann NP, Wescott DJ, Kimmerle EH (2008). Estimation and Evidence in Forensic Anthropology: Age-at-Death. <i>Journal of Forensic Sciences</i>, 53(3):541-557.</a></li>
+              <li id="langley"><a href="#" onclick="return false;">Langley-Shirley N, Jantz RL (2010). A Bayesian Approach to Age Estimation in Modern Americans from the Clavicle. <i>Journal of Forensic Sciences</i>, 55(3):571-583.</a></li>
+              <li id="lewis"><a href="#" onclick="return false;">Lewis CJ, Garvin HM (2016). Reliability of the Walker Cranial Nonmetric Method and Implications for Sex Estimation. <i>Journal of Forensic Sciences</i>, 61(3):743-751.</a></li>
+              <li id="listi"><a href="#" onclick="return false;">Listi GA (2016). The Use of Entheseal Changes in the Femur and Os Coxa for Age Assessment. <i>Journal of Forensic Sciences</i>, 61(1):12-18.</a></li>
+              <li id="lovejoy"><a href="#" onclick="return false;">Lovejoy CO, Meindl RS, Pryzbeck TR, Mensforth RP (1985). Chronological Metamorphosis of the Auricular Surface of the Ilium: A New Method for the Determination of Adult Skeletal Age at Death. <i>American Journal of Biological Anthropology</i>, 68(1):15-28.</a></li>
+              <li id="maijanen"><a href="#" onclick="return false;">Maijanen H (2009). Testing Anatomical Methods for Stature Estimation on Individuals from the W. M. Bass Donated Skeletal Collection. <i>Journal of Forensic Sciences</i>, 54(4):746-752.</a></li>
+              <li id="meeusen"><a href="#" onclick="return false;">Meeusen RA, Christensen AM, Hefner JT (2015). The Use of Femoral Neck Axis Length to Estimate Sex and Ancestry. <i>Journal of Forensic Sciences</i>, 60(5):1300-1304.</a></li>
+              <li id="merritt"><a href="#" onclick="return false;">Merritt CE (2015). The Influence of Body Size on Adult Skeletal Age Estimation Methods. <i>American Journal of Biological Anthropology</i>, 156(1):35-57.</a></li>
+              <li id="milner"><a href="#" onclick="return false;">Milner GR, Boldsen JL (2012). Transition Analysis: A Validation Study With Known-Age Modern American Skeletons. <i>American Journal of Biological Anthropology</i>, 148(1):98-110.</a></li>
+              <li id="miranker"><a href="#" onclick="return false;">Miranker M (2016). A Comparison of Different Age Estimation Methods of the Adult Pelvis. <i>Journal of Forensic Sciences</i>, 61(5):1173-1179.</a></li>
+              <li id="murail"><a href="#" onclick="return false;">Murail P, Brůzek J, Houet F, Cunha E (2005). DSP: A Tool for Probabiliistic Sex Diagnosis Using Worldwide Variability in Hip-Bone Measurements. <i>Bulletins et Mémoires de la Société d’Anthropologie de Paris</i>, 17(3-4):167-176.</a></li>
+              <li id="osborne"><a href="#" onclick="return false;">Osborne DL, Simmons TL, Nawrocki SP (2004). Reconsidering the Auricular Surface as an Indicator of Age at Death. <i>Journal of Forensic Sciences</i>, 49(5):905-911.</a></li>
+              <li id="ousley"><a href="#" onclick="return false;">Ousley S (1995). Should We Estimate Biological or Forensic Stature? <i>Journal of Forensic Sciences</i>, 40:768-773.</a></li>
+              <li id="parr"><a href="#" onclick="return false;">Parr NM, Passalacqua NV, Skorpinski (2017). Investigations Into Age-related Changes in the Human Mandible. <i>Journal of Forensic Sciences</i>, 62(6):1586-1591.</a></li>
+              <li id="phenice"><a href="#" onclick="return false;">Phenice TW (1920). A Newly Developed Visual Method of Sexing the 0s Pubis. <i>American Journal of Biological Anthropology</i>, 30(2):297-301.</a></li>
+              <li id="prince"><a href="#" onclick="return false;">Prince DA, Ubelaker DH (2002). Application of Lamendin’s Adult Dental Aging Technique to a Diverse Skeletal Sample. <i>Journal of Forensic Sciences</i>, 47(1):107-116.</a></li>
+              <li id="raxter"><a href="#" onclick="return false;">Raxter MH, Auerbach BM, Ruff CB (2006). Revision of the Fully Technique for Estimating Statures. <i>American Journal of Biological Anthropology</i>, 130(3):374-384.</a></li>
+              <li id="santos"><a href="#" onclick="return false;">Santos F, Guyomarc'h P, Brůzek J (2014). Statistical sex determination from craniometrics: Comparison of linear discriminant analysis, logistic regression, and support vector machines. <i>Forensic Science International</i>, 245:204.e1-204.e8.</a></li>
+              <li id="snodgrass"><a href="#" onclick="return false;">Snodgrass JJ (2004). Sex Differences and Aging of the Vertebral Column. <i>Journal of Forensic Sciences</i>, 49(3):458-463.</a></li>
+              <li id="spiros"><a href="#" onclick="return false;">Spiros MC, Hefner JT (2019). Ancestry Estimation Using Cranial and Postcranial Macromorphoscopic Traits. <i>Journal of Forensic Sciences</i>, 65(3):921-929.</a></li>
+              <li id="todd"><a href="#" onclick="return false;">Todd TW (1920). Age Changes in the Pubic Bone. <i>American Journal of Biological Anthropology</i>, 3(3):285-334.</a></li>
+              <li id="walker"><a href="#" onclick="return false;">Walker PL (2008). Sexing Skulls Using Discriminant Function Analysis of Visually Assessed Traits. <i>American Journal of Biological Anthropology</i>, 136(1):39-50.</a></li>
+              <li id="wescott"><a href="#" onclick="return false;">Wescott DJ (2005). Population Variation in Femur Subtrochanteric Shape. <i>Journal of Forensic Sciences</i>, 50(2):286-293.</a></li>
+              <li id="winburn"><a href="#" onclick="return false;">Winburn AP, Stock MK (2019). Reconsidering osteoarthritis as a skeletal indicator of age at death. <i>American Journal of Biological Anthropology</i>, 170(3):459-473.</a></li>
             </ul>
             </body>
 
@@ -175,6 +176,7 @@
               filter = input.value.toUpperCase();
               ul = document.getElementById("myUL");
               li = ul.getElementsByTagName("li");
+              // Loop through all list items, and hide those who don't match the search query
               for (i = 0; i < li.length; i++) {
                   a = li[i].getElementsByTagName("a")[0];
                   txtValue = a.textContent || a.innerText;
@@ -185,9 +187,21 @@
                   }
               }
           }
-          function toggleList() {
-            var list = document.getElementById("myUL");
-            list.classList.toggle("clicked");
+          // Get the list element and all its <li> children
+          var ul = document.getElementById("myUL");
+          var li = ul.getElementsByTagName("li");
+
+          // Add event listeners to each <li> element
+          for (var i = 0; i < li.length; i++) {
+            li[i].addEventListener("click", function() {
+              // Remove the "selected" class from any previously selected item
+              var selected = ul.querySelector(".selected");
+              if (selected) {
+                selected.classList.remove("selected");
+              }
+              // Add the "selected" class to the clicked item
+              this.classList.add("selected");
+            });
           }
           </script>
         </div>

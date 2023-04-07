@@ -1,9 +1,9 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_POST) {
   // Get the form data
-  $name = $_POST["name"];
-  $email = $_POST["email"];
-  $message = $_POST["subject"];
+  $name = "name";
+  $email = "email";
+  $message = "subject";
 
   // Set the recipient email address
   $to = "dunnrhia@msu.edu";

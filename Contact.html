@@ -31,7 +31,7 @@
       <h1 style="margin-top: 24px;text-align: center;margin-bottom: 40px;">Contact Me</h1>
     </head>
 
-    <p style="text-align: center; padding: 5px;">Please reach out if you have any questions about the research presented or would like to add anything to the map!</p>
+    <p style="text-align: center; padding: 5px;margin-left: 90px;margin-right: 90px;">Please reach out if you have any questions about the research presented or would like to add anything to the map!</p>
 
 <!--Source code: https://www.w3schools.com/howto/howto_css_contact_form.asp-->
     <head>
@@ -50,6 +50,17 @@
       resize: vertical;
     }
 
+    input[type=email], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+
     input[type=submit] {
       background-color:#666;
       color: white;
@@ -57,71 +68,51 @@
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      margin-bottom: 40px;
     }
 
     input[type=submit]:hover {
       background-color:  #ddd;
     }
 
-    .container:nth-child(2) {
-      border-radius: 5px;
-      background-color: #f2f2f2;
-      padding: 20px;
-      margin-bottom: 40px;
     }
     </style>
     </head>
     <body>
 
     <div class="container">
-      <form action="contact.php" method="post">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your name...">
+      <form id="contact-form" method="POST" action="https://docs.google.com/forms/d/e/1FAIpQLSf0QVIu5EF-dQaLX6YHm2L-TKn-ahMUTnY3ecqq7l4raj5sGw/viewform?usp=sf_link">
 
-        <label for="email">Email</label>
-        <input type="text" id="email" name="email" placeholder="Your email...">
+      <input type="text" name="entry.1419365883" placeholder="Name" required>
+      <input type="email" name="entry.1980480955" placeholder="Email" required>
+      <textarea name="entry.495894326" placeholder="Message" required></textarea>
 
-        <label for="subject">Message</label>
-        <textarea id="subject" name="subject" placeholder="Write your message..." style="height:200px"></textarea>
+      <button type="submit">Send</button>
 
-        <input type="submit" value="Submit">
       </form>
     </div>
 
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript">
-
-    function validateContactForm() {
-      	var valid = true;
-
-      	$(".info").html("");
-      	$(".input-field").css('border', '#e0dfdf 1px solid');
-      	var userName = $("#name").val();
-      	var userEmail = $("#email").val();
-      	var subject = $("#subject").val();
-
-      	if (name == "") {
-      		$("#userName-info").html("Required.");
-      		$("#userName").css('border', '#e66262 1px solid');
-      		valid = false;
-      	}
-      	if (email == "") {
-      		$("#userEmail-info").html("Required.");
-      		$("#userEmail").css('border', '#e66262 1px solid');
-      		valid = false;
-      	}
-      	if (!userEmail.match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
-      		$("#userEmail-info").html("Invalid Email Address.");
-      		$("#userEmail").css('border', '#e66262 1px solid');
-      		valid = false;
-      	}
-
-      	if (subject == "") {
-      		$("#subject-info").html("Required.");
-      		$("#subject").css('border', '#e66262 1px solid');
-      		valid = false;
-      	}
-      	return valid;
-      }
+    <script>
+      const form = document.getElementById('contact-form');
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const formData = new FormData(form);
+        const url = form.action;
+        fetch(url, {
+          method: 'POST',
+          body: formData,
+          mode: 'no-cors',
+          redirect: 'follow'
+        })
+        .then(() => {
+          alert('Thank you for your message!');
+          form.reset();
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+          alert('Sorry, there was a problem submitting your message. Please try again later.');
+        });
+      });
     </script>
 
     </body>
